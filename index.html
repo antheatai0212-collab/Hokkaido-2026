@@ -67,4 +67,4 @@ function sync(){const h=location.hash.replace('#',''); if(['overview','stays','d
 window.addEventListener('hashchange',sync); sync();
 // Daily-detail links switch to the detailed view before jumping to a day.
 document.querySelectorAll('a[href^="#d"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href');show('details');setTimeout(()=>document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'}),40)}));
-</script></body></html>
+document.querySelectorAll('img[src^="img/"]').forEach(img=>img.src=img.src.replace('img/',''));</script></body></html>
